@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">NaukaMagisterka</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_activity_login">ActivityLogin</string>
+    <string name="prompt_email">e-mail</string>
+    <string name="prompt_password">Hasło</string>
+    <string name="prompt_confirmpassword">Powtórz hasło</string>
+    <string name="action_sign_in">Zaloguj</string>
+    <string name="back">Powrót</string>
+    <string name="action_sign_up">Utwórz konto</string>
+    <string name="invalid_email">Błędny adres e-mail!</string>
+    <string name="invalid_password">Hasło jest za krótkie!</string>
+    <string name="incorrect_password">Błędne hasło!</string>
+    <string name="field_required">To pole jest wymagane!</string>
+    <string name="sign_up">Utwórz konto</string>
+    <string name="foobar">Wyłącz światła</string>
+    <string name="title_activity_sign_up">SignUPActivity</string>
+
+</resources>
