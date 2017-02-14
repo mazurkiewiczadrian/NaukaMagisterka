@@ -18,13 +18,13 @@ public class ActivityLogin extends Activity {
 	Button btnLogin;
 	TextView btnSingIn;
 	LoginDataBaseAdapter loginDataBaseAdapter;
-
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login);
-	
+		
+		
 		loginDataBaseAdapter = new LoginDataBaseAdapter(this);
 		loginDataBaseAdapter=loginDataBaseAdapter.open();
 		
@@ -64,11 +64,7 @@ public class ActivityLogin extends Activity {
 				}
 		
 		});
-		
-		
 	}
-	
-
 	
 	@Override
 	protected void onDestroy() {
