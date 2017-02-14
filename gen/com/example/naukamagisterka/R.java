@@ -26,9 +26,11 @@ public final class R {
         public static final int logo=0x7f020001;
     }
     public static final class id {
-        public static final int action_settings=0x7f080014;
+        public static final int SCROLLER_ID=0x7f080014;
+        public static final int action_settings=0x7f080017;
         public static final int backTextView=0x7f080013;
         public static final int buttonSignUp=0x7f080012;
+        public static final int button_back=0x7f080016;
         public static final int button_exit=0x7f080009;
         public static final int button_instructions=0x7f080007;
         public static final int button_logout=0x7f080008;
@@ -47,11 +49,13 @@ public final class R {
         public static final int password=0x7f08000b;
         public static final int passwordSignUp=0x7f080010;
         public static final int signUpTextView=0x7f08000e;
+        public static final int textView1=0x7f080015;
     }
     public static final class layout {
         public static final int activity_home_after_login=0x7f030000;
         public static final int activity_login=0x7f030001;
         public static final int activity_sign_up=0x7f030002;
+        public static final int instructions=0x7f030003;
     }
     public static final class menu {
         public static final int activity_login=0x7f070000;
@@ -68,6 +72,7 @@ public final class R {
         public static final int btn_exit=0x7f050015;
         public static final int btn_instructions=0x7f050013;
         public static final int btn_logout=0x7f050014;
+        public static final int btn_powrót=0x7f050016;
         public static final int btn_start=0x7f050012;
         public static final int field_required=0x7f05000d;
         public static final int foobar=0x7f05000f;
@@ -75,6 +80,7 @@ public final class R {
         public static final int incorrect_password=0x7f05000c;
         public static final int invalid_email=0x7f05000a;
         public static final int invalid_password=0x7f05000b;
+        public static final int loremIpsum=0x7f050017;
         public static final int prompt_confirmpassword=0x7f050006;
         public static final int prompt_email=0x7f050004;
         public static final int prompt_password=0x7f050005;

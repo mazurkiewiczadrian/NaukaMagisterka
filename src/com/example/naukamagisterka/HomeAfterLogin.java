@@ -2,6 +2,7 @@ package com.example.naukamagisterka;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
@@ -67,8 +68,12 @@ public class HomeAfterLogin extends Activity {
 		alert.show();
 	}
 	
-	public void closeActivity(Class class1){
-		closeActivity(class1);
+	public void displayInstructions(View arg0){
+		Dialog dialog = new Dialog(HomeAfterLogin.this);
+		dialog.setContentView(R.layout.instructions);
+		dialog.setTitle("Instrukcja");
+		dialog.show();
 	}
 	
+
 }
