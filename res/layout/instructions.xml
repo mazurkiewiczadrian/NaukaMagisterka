@@ -14,7 +14,7 @@
     <ScrollView
         android:id="@+id/SCROLLER_ID"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="260dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:fillViewport="true"
@@ -31,16 +31,5 @@
             android:text="@string/loremIpsum"
             android:textColor="#ffffff" />
     </ScrollView>
-
-<Button
-    android:id="@+id/button_back"
-    style="?android:textAppearanceSmall"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_alignParentBottom="true"
-    android:background="#66CCFF"
-    android:text="@string/btn_powrót"
-    android:textColor="#ffffffff"
-    android:textStyle="bold" />
 
 </RelativeLayout>

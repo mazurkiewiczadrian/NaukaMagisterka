@@ -65,7 +65,8 @@
                         android:maxLines="1" android:singleLine="true"
                         android:layout_marginBottom="10dp"
                         android:textColorHint="#ffffffff"
-                        android:textColor="#ffffffff" />
+                        android:textColor="#ffffffff"
+                        android:typeface="serif"/>
 
                     <Button
                         android:id="@+id/email_sign_in_button"

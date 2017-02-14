@@ -10,13 +10,24 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 
 public class HomeAfterLogin extends Activity {
-
+	ImageView logo;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_home_after_login);
+		
+		logo = (ImageView)findViewById(R.id.imageView1);
+		logo.setOnClickListener(new ImageView.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				displayAbout(logo);
+			}
+		});
 	}
 
 	@Override
@@ -52,8 +63,6 @@ public class HomeAfterLogin extends Activity {
 					finishAffinity();
 				} catch (Exception e) {
 				}
-				
-				
 			}
 		});
 		
@@ -73,6 +82,14 @@ public class HomeAfterLogin extends Activity {
 		dialog.setContentView(R.layout.instructions);
 		dialog.setTitle("Instrukcja");
 		dialog.show();
+	}
+	
+	public void displayAbout(View arg0){
+		Dialog dialog = new Dialog(HomeAfterLogin.this);
+		dialog.setContentView(R.layout.about);
+		dialog.setTitle("O grze");
+		dialog.show();
+		
 	}
 	
 
