@@ -19,5 +19,9 @@
     <string name="foobar">Wyłącz światła</string>
     <string name="title_activity_sign_up">SignUPActivity</string>
     <string name="title_activity_home_after_login">HomeAfterLogin</string>
+    <string name="btn_start">Start</string>
+    <string name="btn_instructions">Instrukcja</string>
+    <string name="btn_logout">Wyloguj</string>
+    <string name="btn_exit">Wyjście</string>
 
 </resources>

@@ -26,23 +26,27 @@ public final class R {
         public static final int logo=0x7f020001;
     }
     public static final class id {
-        public static final int action_settings=0x7f080010;
-        public static final int backTextView=0x7f08000f;
-        public static final int buttonSignUp=0x7f08000e;
-        public static final int confirmPasswordSignUp=0x7f08000d;
-        public static final int email=0x7f080006;
-        public static final int emailSignUp=0x7f08000b;
+        public static final int action_settings=0x7f080014;
+        public static final int backTextView=0x7f080013;
+        public static final int buttonSignUp=0x7f080012;
+        public static final int button_exit=0x7f080009;
+        public static final int button_instructions=0x7f080007;
+        public static final int button_logout=0x7f080008;
+        public static final int button_start=0x7f080006;
+        public static final int confirmPasswordSignUp=0x7f080011;
+        public static final int email=0x7f08000a;
+        public static final int emailSignUp=0x7f08000f;
         public static final int email_login_form=0x7f080005;
-        public static final int email_sign_in_button=0x7f080008;
+        public static final int email_sign_in_button=0x7f08000c;
         public static final int imageView1=0x7f080001;
         public static final int ll1=0x7f080000;
         public static final int ll2=0x7f080002;
-        public static final int ll3=0x7f080009;
+        public static final int ll3=0x7f08000d;
         public static final int login_form=0x7f080004;
         public static final int login_progress=0x7f080003;
-        public static final int password=0x7f080007;
-        public static final int passwordSignUp=0x7f08000c;
-        public static final int signUpTextView=0x7f08000a;
+        public static final int password=0x7f08000b;
+        public static final int passwordSignUp=0x7f080010;
+        public static final int signUpTextView=0x7f08000e;
     }
     public static final class layout {
         public static final int activity_home_after_login=0x7f030000;
@@ -61,6 +65,10 @@ public final class R {
         public static final int action_sign_up=0x7f050009;
         public static final int app_name=0x7f050000;
         public static final int back=0x7f050008;
+        public static final int btn_exit=0x7f050015;
+        public static final int btn_instructions=0x7f050013;
+        public static final int btn_logout=0x7f050014;
+        public static final int btn_start=0x7f050012;
         public static final int field_required=0x7f05000d;
         public static final int foobar=0x7f05000f;
         public static final int hello_world=0x7f050001;
