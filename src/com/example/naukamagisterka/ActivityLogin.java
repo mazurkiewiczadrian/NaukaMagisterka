@@ -2,6 +2,7 @@ package com.example.naukamagisterka;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.DialerKeyListener;
@@ -55,6 +56,7 @@ public class ActivityLogin extends Activity {
 				  
 					if (storedPassword.equals(userPassword)){
 						Toast.makeText(ActivityLogin.this, "Udana próba zalogowania.", Toast.LENGTH_LONG).show();
+						setContentView(R.layout.activity_home_after_login);
 						}	
 					else{
 						Toast.makeText(ActivityLogin.this, "Niepoprawny e-mail lub has³o! Spróbuj ponownie.", Toast.LENGTH_LONG).show();
@@ -65,6 +67,8 @@ public class ActivityLogin extends Activity {
 		
 		
 	}
+	
+
 	
 	@Override
 	protected void onDestroy() {

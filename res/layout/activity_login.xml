@@ -9,22 +9,20 @@
     android:descendantFocusability="beforeDescendants"
     android:focusableInTouchMode="true">
 
-    <LinearLayout
+   <LinearLayout
         android:id="@+id/ll1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:gravity="center_vertical|center_horizontal">
 
-        <TextView
+        <ImageView
+            android:id="@+id/imageView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/foobar"
-            android:id="@+id/textView2"
-            android:textSize="30sp"
-            android:textColor="#ffffffff" />
-
+            android:src="@drawable/logo" />
+        
+  
 
     </LinearLayout>
 
@@ -42,8 +40,11 @@
             <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <LinearLayout android:id="@+id/email_login_form" android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/email_login_form"
+                    android:layout_width="match_parent"
+                    android:layout_height="254dp"
+                    android:orientation="vertical" >
 
                     <AutoCompleteTextView android:id="@+id/email" android:layout_width="match_parent"
                         android:layout_height="wrap_content" android:hint="@string/prompt_email"

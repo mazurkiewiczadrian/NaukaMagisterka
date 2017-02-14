@@ -57,7 +57,8 @@ public class SignUPActivity extends Activity {
 				
 				else{
 					loginDataBaseAdapter.insertEntry(userName, password);
-					Toast.makeText(getApplicationContext(), "Konto zosta³o utworzone", Toast.LENGTH_LONG).show();
+					Toast.makeText(getApplicationContext(), "Konto zosta³o utworzone. Mo¿esz siê zalogowaæ.", Toast.LENGTH_LONG).show();
+					setContentView(R.layout.activity_login);
 					
 				}
 			}

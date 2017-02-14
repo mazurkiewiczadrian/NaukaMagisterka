@@ -26,6 +26,10 @@
             android:name=".SignUPActivity"
             android:label="@string/title_activity_sign_up" >
         </activity>
+        <activity
+            android:name=".HomeAfterLogin"
+            android:label="@string/title_activity_home_after_login" >
+        </activity>
     </application>
 
 </manifest>

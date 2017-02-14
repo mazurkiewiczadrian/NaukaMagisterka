@@ -13,22 +13,12 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".LoginActivity" >
 
-    <LinearLayout
-        android:id="@+id/ll1"
-        android:layout_width="match_parent"
-        android:layout_height="106dp"
-        android:layout_weight="0.01"
-        android:gravity="center_vertical|center_horizontal" >
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/foobar"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#ffffffff"
-            android:textSize="30sp" />
-    </LinearLayout>
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.78"
+        android:src="@drawable/logo" />
 
     <LinearLayout
         android:id="@+id/ll2"

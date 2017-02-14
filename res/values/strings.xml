@@ -18,5 +18,6 @@
     <string name="sign_up">Utwórz konto</string>
     <string name="foobar">Wyłącz światła</string>
     <string name="title_activity_sign_up">SignUPActivity</string>
+    <string name="title_activity_home_after_login">HomeAfterLogin</string>
 
 </resources>
