@@ -18,6 +18,7 @@ public class ActivityLogin extends Activity {
 	Button btnLogin;
 	TextView btnSingIn;
 	LoginDataBaseAdapter loginDataBaseAdapter;
+	Intent intent;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +57,8 @@ public class ActivityLogin extends Activity {
 				  
 					if (storedPassword.equals(userPassword)){
 						Toast.makeText(ActivityLogin.this, "Udana próba zalogowania.", Toast.LENGTH_LONG).show();
-						setContentView(R.layout.activity_home_after_login);
+						intent = new Intent(ActivityLogin.this, HomeAfterLogin.class);
+						startActivity(intent);
 						}	
 					else{
 						Toast.makeText(ActivityLogin.this, "Niepoprawny e-mail lub has³o! Spróbuj ponownie.", Toast.LENGTH_LONG).show();

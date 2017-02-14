@@ -88,7 +88,8 @@
                         android:background="#66CCFF"
                         android:text="@string/btn_exit"
                         android:textColor="#ffffffff"
-                        android:textStyle="bold" />
+                        android:textStyle="bold" 
+                        android:onClick="exitApplication"/>
 
                 </LinearLayout>
             </LinearLayout>

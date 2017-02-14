@@ -57,6 +57,8 @@ public class SignUPActivity extends Activity {
 				
 				else{
 					loginDataBaseAdapter.insertEntry(userName, password);
+					intent = new Intent(SignUPActivity.this, ActivityLogin.class);
+					startActivity(intent);
 					Toast.makeText(getApplicationContext(), "Konto zosta³o utworzone. Mo¿esz siê zalogowaæ.", Toast.LENGTH_LONG).show();
 				}
 			}
