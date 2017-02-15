@@ -10,10 +10,12 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 public class HomeAfterLogin extends Activity {
 	ImageView logo;
+	LoginDataBaseAdapter loginDataBaseAdapter;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -75,6 +77,21 @@ public class HomeAfterLogin extends Activity {
 		});
 		AlertDialog alert = builder.create();
 		alert.show();
+	}
+	
+	public void logOut(View arg0){
+		Button button = (Button)findViewById(R.id.button_logout);
+		button.setOnClickListener(new Button.OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				try {
+					HomeAfterLogin.this.finish();
+					loginDataBaseAdapter.close();
+				} catch (Exception e) {
+				}
+			}
+		});
 	}
 	
 	public void displayInstructions(View arg0){

@@ -78,7 +78,8 @@
                         android:background="#66CCFF"
                         android:text="@string/btn_logout"
                         android:textColor="#ffffffff"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:onClick="logOut" />
 
                     <Button
                         android:id="@+id/button_exit"
