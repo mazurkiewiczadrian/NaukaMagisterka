@@ -25,7 +25,7 @@
     <string name="btn_exit">Wyjście</string>
     <string name="btn_powrót">Powrót</string>
     <string name="instructions">Po rozpoczęciu użytkownik uzyskuje dostęp do swojego najlepszego wyniku.\n\n\
-Wynik jaki uzyska użytkownik jest obliczany w wyniku podzielenia jego najlepszego
+Wynik jaki uzyska użytkownik jest obliczany na zasadzie podzielenia jego najlepszego
 uzyskanego wyniku przez liczbę naciśnięć przycisków.
 Im mniej naciśnięć przycisków gracz wykona, tym większa będzie liczba 
 uzuskanych przez niego punktów. \n\n\
