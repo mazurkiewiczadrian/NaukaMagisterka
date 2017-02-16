@@ -66,6 +66,7 @@ public final class R {
         public static final int sign_u=0x7f070003;
     }
     public static final class string {
+        public static final int about=0x7f050018;
         public static final int action_settings=0x7f050002;
         public static final int action_sign_in=0x7f050007;
         public static final int action_sign_up=0x7f050009;
@@ -80,9 +81,10 @@ public final class R {
         public static final int foobar=0x7f05000f;
         public static final int hello_world=0x7f050001;
         public static final int incorrect_password=0x7f05000c;
+        public static final int instructions=0x7f050017;
         public static final int invalid_email=0x7f05000a;
         public static final int invalid_password=0x7f05000b;
-        public static final int loremIpsum=0x7f050017;
+        public static final int loremIpsum=0x7f050019;
         public static final int prompt_confirmpassword=0x7f050006;
         public static final int prompt_email=0x7f050004;
         public static final int prompt_password=0x7f050005;

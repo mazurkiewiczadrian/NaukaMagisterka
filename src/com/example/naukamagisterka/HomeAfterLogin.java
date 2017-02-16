@@ -16,11 +16,25 @@ import android.widget.ImageView;
 public class HomeAfterLogin extends Activity {
 	ImageView logo;
 	LoginDataBaseAdapter loginDataBaseAdapter;
+	Button button;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_home_after_login);
+		button = (Button)findViewById(R.id.button_logout);
+		button.setOnClickListener(new Button.OnClickListener() {
+			//Wylogowanie
+			@Override
+			public void onClick(View arg0) {
+				try {
+					HomeAfterLogin.this.finish();
+					loginDataBaseAdapter.close();
+				} catch (Exception e) {
+				}
+			}
+		});
+		
 		
 		logo = (ImageView)findViewById(R.id.imageView1);
 		logo.setOnClickListener(new ImageView.OnClickListener() {
@@ -79,25 +93,10 @@ public class HomeAfterLogin extends Activity {
 		alert.show();
 	}
 	
-	public void logOut(View arg0){
-		Button button = (Button)findViewById(R.id.button_logout);
-		button.setOnClickListener(new Button.OnClickListener() {
-			
-			@Override
-			public void onClick(View arg0) {
-				try {
-					HomeAfterLogin.this.finish();
-					loginDataBaseAdapter.close();
-				} catch (Exception e) {
-				}
-			}
-		});
-	}
-	
 	public void displayInstructions(View arg0){
 		Dialog dialog = new Dialog(HomeAfterLogin.this);
 		dialog.setContentView(R.layout.instructions);
-		dialog.setTitle("Instrukcja");
+		dialog.setTitle("Zasady gry");
 		dialog.show();
 	}
 	
