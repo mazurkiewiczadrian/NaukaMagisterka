@@ -1,12 +1,37 @@
 package com.example.naukamagisterka;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.ToggleButton;
 
 public class Game extends Activity {
-
+	
+	private GameWorld gw;
+	private UpdateColor updtCol;
+	
+	@SuppressWarnings("unused")
+	private UpdateGameObject updtGameObj;
+	private LoginDataBaseAdapter data;
+	
+	private Button pause_btn, undo_btn, hint_btn, close_btn, next_level_btn,
+	exit_btn, icon_btn;
+	private ToggleButton sound_btn;
+	private TextView timer_txt, move_cnt, best_cnt, score_cnt,
+	toast_title_txt, level_txt;
+	private Dialog dialog_box, menu_dialog_box;
+	private Handler time_handler = new Handler();
+	private Handler hint_handler = new Handler();
+	Toast toast;
+	private long mill_sec=0, buffer = 0, updt_time=0;
+	private boolean sound = true, menu_show=false;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

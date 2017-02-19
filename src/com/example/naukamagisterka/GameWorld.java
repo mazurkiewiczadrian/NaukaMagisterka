@@ -60,6 +60,7 @@ public class GameWorld {
 		col.put(true, R.drawable.blueflsh);
 		col.put(false, R.drawable.whiteflsh);
 		
+		
 	}
 	public void addObservator(Observator o){
 		observators.add(o);
