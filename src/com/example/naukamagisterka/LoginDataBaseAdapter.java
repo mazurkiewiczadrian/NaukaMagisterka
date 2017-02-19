@@ -14,11 +14,11 @@ public class LoginDataBaseAdapter {
 	
 	public String Email;
 	public String Password;
-	public int Points;
+	public int LEVEL;
 	
 	LoginDataBaseAdapter loginDataBaseAdapter;
 	
-	static final String DATABASE_CREATE = "CREATE TABLE IF NOT EXISTS "+"USERS"+"(USERNAME VARCHAR UNIQUE, PASSWORD VARCHAR, POINTS INT)"+";"+"";
+	static final String DATABASE_CREATE = "CREATE TABLE IF NOT EXISTS "+"USERS"+"(USERNAME VARCHAR UNIQUE, PASSWORD VARCHAR, LEVEL INT)"+";"+"";
 	
 	public SQLiteDatabase db;
 	private final Context context;
@@ -49,7 +49,7 @@ public class LoginDataBaseAdapter {
 		
 		newValues.put("USERNAME", userName);
 		newValues.put("PASSWORD", password);
-		newValues.put("POINTS", 0);
+		newValues.put("LEVEL", 0);
 		
 		db.insert("USERS", null, newValues);
 	}
@@ -94,11 +94,28 @@ public class LoginDataBaseAdapter {
 		
 	}
 	
+	public String getSingleEntryLevel(String userName){
+		Cursor cursor = db.query("USERS", null, " USERNAME=?", new String[]{userName},null,null,null);
+		if (cursor.getCount()<1) //Nie ma username
+		{
+			cursor.close();
+			return "NOT EXIST";
+		}
+		
+		else{
+		cursor.moveToFirst();
+		String level = cursor.getString(cursor.getColumnIndex("LEVEL"));
+		cursor.close();
+		return level;
+		}
+		
+	}
+	
 	public void updateEntry(String userName, String password){
 			ContentValues updateValues = new ContentValues();
 			updateValues.put("USERNAME", userName);
 			updateValues.put("PASSWORD", password);
-			updateValues.put("POINTS", 0);
+			updateValues.put("LEVEL", 0);
 			
 			String where = "USERNAME=?";
 			db.update("USERS", updateValues, where, new String[]{userName});

@@ -56,7 +56,7 @@ public class ActivityLogin extends Activity {
 				  String storedPassword = loginDataBaseAdapter.getSingleEntry(userName);
 				  
 					if (storedPassword.equals(userPassword)){
-						Toast.makeText(ActivityLogin.this, "Udana próba zalogowania.", Toast.LENGTH_LONG).show();
+						//Toast.makeText(ActivityLogin.this, "Udana próba zalogowania.", Toast.LENGTH_LONG).show();
 						intent = new Intent(ActivityLogin.this, HomeAfterLogin.class);
 						startActivity(intent);
 						}	

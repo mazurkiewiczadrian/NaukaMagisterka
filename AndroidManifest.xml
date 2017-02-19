@@ -30,6 +30,10 @@
             android:name=".HomeAfterLogin"
             android:label="@string/title_activity_home_after_login" >
         </activity>
+        <activity
+            android:name=".Game"
+            android:label="@string/title_activity_game" >
+        </activity>
     </application>
 
 </manifest>

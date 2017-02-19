@@ -1,5 +1,7 @@
 package com.example.naukamagisterka;
 
+import android.accounts.Account;
+import android.accounts.OnAccountsUpdateListener;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -17,12 +19,15 @@ public class HomeAfterLogin extends Activity {
 	ImageView logo;
 	LoginDataBaseAdapter loginDataBaseAdapter;
 	Button button;
+	Intent intent;
+	Button button_start; 
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_home_after_login);
 		button = (Button)findViewById(R.id.button_logout);
+		button_start = (Button) findViewById(R.id.button_start);
 		button.setOnClickListener(new Button.OnClickListener() {
 			//Wylogowanie
 			@Override
@@ -32,6 +37,15 @@ public class HomeAfterLogin extends Activity {
 					loginDataBaseAdapter.close();
 				} catch (Exception e) {
 				}
+			}
+		});
+		
+		button_start.setOnClickListener(new Button.OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				intent = new Intent(HomeAfterLogin.this, Game.class);
+				startActivity(intent);
 			}
 		});
 		
