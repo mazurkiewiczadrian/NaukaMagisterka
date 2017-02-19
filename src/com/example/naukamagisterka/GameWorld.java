@@ -262,6 +262,16 @@ public class GameWorld {
 		gameworld.addObservator(o);
 	}
 	
+	//Poni¿sze metody do uzupe³nienia
+	public int getMove() {
+		return 0;
+	}
+	public void setMove(int i) {
+		
+	}
+	
+
+	
 	
 	
 	

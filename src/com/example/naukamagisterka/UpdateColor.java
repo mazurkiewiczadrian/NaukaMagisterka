@@ -1,7 +1,6 @@
 package com.example.naukamagisterka;
 
 import android.database.sqlite.SQLiteDatabase;
-import android.widget.EditText;
 
 public class UpdateColor extends Observator {
 	

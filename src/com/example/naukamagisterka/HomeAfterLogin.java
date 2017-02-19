@@ -26,6 +26,8 @@ public class HomeAfterLogin extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_home_after_login);
+		
+		
 		button = (Button)findViewById(R.id.button_logout);
 		button_start = (Button) findViewById(R.id.button_start);
 		button.setOnClickListener(new Button.OnClickListener() {
