@@ -257,6 +257,11 @@ public class GameWorld {
 		return btn;
 	}
 	
+	public void attach(int level, Observator o){
+		GameWorld gameworld = new GameWorld(1);
+		gameworld.addObservator(o);
+	}
+	
 	
 	
 	

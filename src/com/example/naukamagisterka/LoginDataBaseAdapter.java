@@ -111,11 +111,11 @@ public class LoginDataBaseAdapter {
 		
 	}
 	
-	public void updateEntry(String userName, String password){
+	public void updateEntry(String userName, String password, String level){
 			ContentValues updateValues = new ContentValues();
 			updateValues.put("USERNAME", userName);
 			updateValues.put("PASSWORD", password);
-			updateValues.put("LEVEL", 0);
+			updateValues.put("LEVEL", level);
 			
 			String where = "USERNAME=?";
 			db.update("USERS", updateValues, where, new String[]{userName});
