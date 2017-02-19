@@ -1,5 +1,6 @@
 package com.example.naukamagisterka;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Observer;
@@ -10,6 +11,7 @@ import org.w3c.dom.Node;
 import android.widget.Button;
 
 public class GameWorld {
+	private ArrayList<Observator> observators; 
 	int index;
 	Button[] btn;
 	final int row_org_matrix;
@@ -37,6 +39,7 @@ public class GameWorld {
 	public TreeMap<Integer, boolean[]> tm = new TreeMap<Integer, boolean[]>();
 	
 	public GameWorld(int level) {
+		observators = new ArrayList<Observator>();
 		index = (level-1)/5;
 		orig_matrix = new boolean[Global.MATRIX_SIZE[index][0]][Global.MATRIX_SIZE[index][1]];
 		row_org_matrix = orig_matrix.length;
@@ -56,13 +59,24 @@ public class GameWorld {
 		btn = new Button[n+1];
 		col.put(true, R.drawable.blueflsh);
 		col.put(false, R.drawable.whiteflsh);
+		
+	}
+	public void addObservator(Observator o){
+		observators.add(o);
 	}
 	
-	/* To nie dzia³a ale istnieje wbudowana funkcja 
-	 * public void notifyObservers()
-	   Checks the internal flag to see if the observable has changed
-       state and notifies all observers.
-	 * 
+	public void deleteObservator(Observator o){
+		int index = observators.indexOf(o);
+		observators.remove(index);
+	}
+	
+	public void notifyAllObservators(){
+		for (Observator observator : observators) {
+			observator.update();
+		}
+	}
+	
+	/* 
 	 * 
 	public void notifyAllObservers(){
 		for (Observer observer : observers){
@@ -226,4 +240,24 @@ public class GameWorld {
 		tm.put(var3, result_matrix_v2);
 		tm.put(var4, result_matrix_v12);
 	}
+	
+	public int getRow_org_matrix(){
+		return row_org_matrix;
+	}
+	
+	public int getCol_org_matrix(){
+		return col_org_matrix;
+	}
+	
+	public HashMap<Boolean, Integer> getCol(){
+		return col;
+	}
+	
+	public Button[] getBtn(){
+		return btn;
+	}
+	
+	
+	
+	
 }
