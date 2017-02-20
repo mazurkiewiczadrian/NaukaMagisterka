@@ -18,7 +18,7 @@ public class LoginDataBaseAdapter {
 	
 	LoginDataBaseAdapter loginDataBaseAdapter;
 	
-	static final String DATABASE_CREATE = "CREATE TABLE IF NOT EXISTS "+"USERS"+"(USERNAME VARCHAR UNIQUE, PASSWORD VARCHAR, LEVEL INT)"+";"+"";
+	static final String DATABASE_CREATE = "CREATE TABLE IF NOT EXISTS "+"USERS"+"(USERNAME VARCHAR UNIQUE, PASSWORD VARCHAR, LEVEL INT, POINTS INT)"+";"+"";
 	
 	public SQLiteDatabase db;
 	private final Context context;
@@ -49,7 +49,8 @@ public class LoginDataBaseAdapter {
 		
 		newValues.put("USERNAME", userName);
 		newValues.put("PASSWORD", password);
-		newValues.put("LEVEL", 0);
+		newValues.put("LEVEL", 1);
+		newValues.put("POINTS", 0);
 		
 		db.insert("USERS", null, newValues);
 	}
@@ -111,11 +112,12 @@ public class LoginDataBaseAdapter {
 		
 	}
 	
-	public void updateEntry(String userName, String password, String level){
+	public void updateEntry(String userName, String password, String level, String points){
 			ContentValues updateValues = new ContentValues();
 			updateValues.put("USERNAME", userName);
 			updateValues.put("PASSWORD", password);
 			updateValues.put("LEVEL", level);
+			updateValues.put("POINTS", points);
 			
 			String where = "USERNAME=?";
 			db.update("USERS", updateValues, where, new String[]{userName});
