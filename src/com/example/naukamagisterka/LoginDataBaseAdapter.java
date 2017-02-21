@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 public class LoginDataBaseAdapter {
 	static final String DATABASE_NAME = "WylaczSwiatloDB";
-	static final int DATABASE_VERSION=1;
+	static final int DATABASE_VERSION=3;
 	public static final int NAME_COULMN=1;
 	
 	public String Email;
@@ -77,6 +77,7 @@ public class LoginDataBaseAdapter {
 		}
 		
 	}
+	
 	
 	public String getSingleEntryUsers(String userName){
 		Cursor cursor = db.query("USERS", null, " USERNAME=?", new String[]{userName},null,null,null);
