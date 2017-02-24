@@ -19,12 +19,14 @@ public class ActivityLogin extends Activity {
 	TextView btnSingIn;
 	LoginDataBaseAdapter loginDataBaseAdapter;
 	Intent intent;
+	public static String loggedUser;
+	
+	
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login);
-		
 		
 		loginDataBaseAdapter = new LoginDataBaseAdapter(this);
 		loginDataBaseAdapter=loginDataBaseAdapter.open();
@@ -34,9 +36,6 @@ public class ActivityLogin extends Activity {
 		
 		final EditText editTextEmail = (EditText)findViewById(R.id.email);
 		final EditText editTextPassword = (EditText)findViewById(R.id.password);
-		
-		
-		
 		
 		btnSingIn.setOnClickListener(new View.OnClickListener() {
 			
@@ -51,14 +50,17 @@ public class ActivityLogin extends Activity {
 		btnLogin.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				 final String userName = editTextEmail.getText().toString();
+				 String userName = editTextEmail.getText().toString();
 				 final String userPassword = editTextPassword.getText().toString();
 				  String storedPassword = loginDataBaseAdapter.getSingleEntry(userName);
 				  
 					if (storedPassword.equals(userPassword)){
+						loggedUser = userName;
 						//Toast.makeText(ActivityLogin.this, "Udana próba zalogowania.", Toast.LENGTH_LONG).show();
 						intent = new Intent(ActivityLogin.this, HomeAfterLogin.class);
 						startActivity(intent);
+						
+						
 						}	
 					else{
 						Toast.makeText(ActivityLogin.this, "Niepoprawny e-mail lub has³o! Spróbuj ponownie.", Toast.LENGTH_LONG).show();
@@ -67,6 +69,17 @@ public class ActivityLogin extends Activity {
 		
 		});
 	}
+	
+	public String getLoggedUser() {
+		return loggedUser;
+	}
+	
+	public String setUserName(String loggedUser, String userName){
+		return loggedUser = userName;
+	}
+	
+	
+	
 	
 	@Override
 	protected void onDestroy() {

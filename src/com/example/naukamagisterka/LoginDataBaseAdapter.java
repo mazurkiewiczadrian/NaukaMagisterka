@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 public class LoginDataBaseAdapter {
 	static final String DATABASE_NAME = "WylaczSwiatloDB";
-	static final int DATABASE_VERSION=3;
+	static final int DATABASE_VERSION=4;
 	public static final int NAME_COULMN=1;
 	
 	public String Email;

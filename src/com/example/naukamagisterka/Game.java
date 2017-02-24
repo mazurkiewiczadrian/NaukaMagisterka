@@ -13,6 +13,8 @@ import android.widget.ToggleButton;
 
 public class Game extends Activity {
 	
+	ActivityLogin al = new ActivityLogin();
+	
 	private GameWorld gw;
 	private UpdateColor updtCol;
 	
@@ -36,6 +38,10 @@ public class Game extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_game);
+		
+		TextView tv = (TextView)findViewById(R.id.textView1);
+		String user = al.getLoggedUser();
+		tv.setText(user);
 	}
 
 	@Override
