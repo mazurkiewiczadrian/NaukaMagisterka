@@ -19,7 +19,10 @@ public class ActivityLogin extends Activity {
 	TextView btnSingIn;
 	LoginDataBaseAdapter loginDataBaseAdapter;
 	Intent intent;
+	
 	public static String loggedUser;
+	public static String userPoints;
+	public static String userLevel;
 	
 	
 	
@@ -44,6 +47,7 @@ public class ActivityLogin extends Activity {
 				
 				Intent intentSignIn = new Intent(getApplicationContext(), SignUPActivity.class);
 				startActivity(intentSignIn);
+				
 			}
 		});
 		
@@ -56,6 +60,9 @@ public class ActivityLogin extends Activity {
 				  
 					if (storedPassword.equals(userPassword)){
 						loggedUser = userName;
+						
+						userLevel = loginDataBaseAdapter.getSingleEntryLevel(userName);
+						userPoints = loginDataBaseAdapter.getSingleEntryPoints(userName);
 						//Toast.makeText(ActivityLogin.this, "Udana próba zalogowania.", Toast.LENGTH_LONG).show();
 						intent = new Intent(ActivityLogin.this, HomeAfterLogin.class);
 						startActivity(intent);
@@ -74,12 +81,14 @@ public class ActivityLogin extends Activity {
 		return loggedUser;
 	}
 	
-	public String setUserName(String loggedUser, String userName){
-		return loggedUser = userName;
+	
+	public  String getUserLevel() {
+		return userLevel;
 	}
 	
-	
-	
+	public  String getUserPoints() {
+		return userPoints;
+	}
 	
 	@Override
 	protected void onDestroy() {

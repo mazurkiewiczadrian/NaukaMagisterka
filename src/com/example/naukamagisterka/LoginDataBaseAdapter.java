@@ -113,6 +113,22 @@ public class LoginDataBaseAdapter {
 		
 	}
 	
+	public String getSingleEntryPoints(String userName){
+		Cursor cursor = db.query("USERS", null, " USERNAME=?", new String[]{userName},null,null,null);
+		if (cursor.getCount()<1) //Nie ma username
+		{
+			cursor.close();
+			return "NOT EXIST";
+		}
+		
+		else{
+		cursor.moveToFirst();
+		String points = cursor.getString(cursor.getColumnIndex("POINTS"));
+		cursor.close();
+		return points;
+		}
+	}
+	
 	public void updateEntry(String userName, String password, String level, String points){
 			ContentValues updateValues = new ContentValues();
 			updateValues.put("USERNAME", userName);

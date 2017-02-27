@@ -1,7 +1,10 @@
 package com.example.naukamagisterka;
 
+import java.sql.Connection;
+
 import android.app.Activity;
 import android.app.Dialog;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Menu;
@@ -39,9 +42,23 @@ public class Game extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_game);
 		
-		TextView tv = (TextView)findViewById(R.id.textView1);
+		//Testowe wyœwietlenie nazwy zalogowanego u¿ytkownika
+		TextView tvUser = (TextView)findViewById(R.id.textView1);
 		String user = al.getLoggedUser();
-		tv.setText(user);
+		tvUser.setText(user);
+		
+		//Testowe wyœwietlenie levelu zalogowanego u¿ytkownika
+		TextView tvLevel = (TextView)findViewById(R.id.textViewLevel);
+		String userLevel = al.getUserLevel();
+		tvLevel.setText(userLevel);
+		
+		//Testowe wyœwietlenie punktów zalogowanego u¿ytkownika
+		TextView tvPoints = (TextView)findViewById(R.id.textViewPoints);
+		String userPoints = al.getUserPoints();
+		tvPoints.setText(userPoints);
+		
+		
+		
 	}
 
 	@Override
