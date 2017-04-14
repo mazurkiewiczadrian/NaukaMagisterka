@@ -7,6 +7,7 @@ import android.app.Dialog;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.SystemClock;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
@@ -60,6 +61,23 @@ public class Game extends Activity {
 		
 		
 	}
+	
+	private Runnable timer_thread = new Runnable() {
+		
+		@Override
+		public void run() {
+			if (Global.PAUSE == false) {
+				mill_sec = SystemClock.uptimeMillis() - Global.START_TIME;
+				updt_time = buffer + mill_sec;
+			}else {
+				int secs = (int)(updt_time/1000);
+				int mins = secs/60;
+				int hours = secs%60;
+				timer_txt.setText(hours+":"+mins+":"+String.format("%02d", secs));
+				time_handler.postDelayed(this, 0);
+			}
+		}
+	};
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

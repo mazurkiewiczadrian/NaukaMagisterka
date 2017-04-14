@@ -6,7 +6,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.naukamagisterka.Game" >
+    tools:context="com.example.naukamagisterka.Game"
+    android:background="#0099CC"  >
 
     <TextView
         android:id="@+id/textView1"
@@ -14,26 +15,29 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="18dp"
-        android:layout_marginTop="27dp"
-        android:text="TextView" />
+        android:text="TextView"
+        android:textColor="#FFFFFF" />
 
     <TextView
         android:id="@+id/textViewPoints"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/textView1"
-        android:layout_below="@+id/textView1"
-        android:layout_marginTop="29dp"
-        android:text="TextView" />
+        android:layout_alignBaseline="@+id/textView1"
+        android:layout_alignBottom="@+id/textView1"
+        android:layout_marginLeft="28dp"
+        android:layout_toRightOf="@+id/textView1"
+        android:text="TextView"
+        android:textColor="#FFFFFF" />
 
     <TextView
         android:id="@+id/textViewLevel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textViewPoints"
-        android:layout_below="@+id/textViewPoints"
-        android:layout_marginTop="36dp"
-        android:text="TextView" />
+        android:layout_alignBaseline="@+id/textViewPoints"
+        android:layout_alignBottom="@+id/textViewPoints"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="42dp"
+        android:text="TextView"
+        android:textColor="#FFFFFF" />
 
 </RelativeLayout>
